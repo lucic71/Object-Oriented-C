@@ -150,7 +150,7 @@ ssize_t sizeOf (const void * self) {
 
     const struct Class * cp = (const struct Class *) self;
 
-    if (cp && cp -> size) {
+    if (cp) {
         return cp -> size;
     }
 
