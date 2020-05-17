@@ -1,9 +1,0 @@
-% Queue add {
-	return addLast(_self, element);
-}
-
-% Queue take {
-	return takeFirst(_self);
-}
-
-%init

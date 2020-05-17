@@ -1,6 +1,0 @@
-def hook-stop
-info args
-info locals
-list
-echo ####################################################\n\n
-end

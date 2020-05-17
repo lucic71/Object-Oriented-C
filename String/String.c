@@ -6,6 +6,10 @@
 #include <stdlib.h>
 #include <string.h>
 
+/*
+ * String extends the generic struct class.
+ *
+ */
 struct String {
     const void * class;
     char * text;

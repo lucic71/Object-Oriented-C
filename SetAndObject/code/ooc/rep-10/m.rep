@@ -1,5 +1,0 @@
-% -M			// implement -M option
-
-`{ifnot `class `root
-    `class .d:  `super .d `n
-`}
