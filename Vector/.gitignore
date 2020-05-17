@@ -1,0 +1,7 @@
+# object files
+*.o
+
+# gdb stuff
+.gdb*
+*peda*
+
