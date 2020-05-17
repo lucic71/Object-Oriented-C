@@ -4,7 +4,7 @@ LIBRARY=none
 INCPATHS=include
 LIBPATHS=
 LDFLAGS=
-CCFLAGS=-c -Wall -g3
+CCFLAGS=-c -Wall -ggdb
 CC=gcc
 
 # Automatic generation of some important lists

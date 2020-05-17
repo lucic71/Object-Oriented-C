@@ -11,6 +11,10 @@
  *  We will work only with generic pointers to handle as much cases
  *  as possible.
  *
+ *  We use double pointers where possible because it easier to make
+ *  some sanity checks to check if the content is not NULL or to
+ *  see if the class contains some imporant fields like ctor, dtor etc.
+ *
  */
 
 /*
@@ -26,6 +30,15 @@
  *  2. Allocate size for this class
  *  3. Call the ctor with the variable arguments we received
  *  4. Return a pointer to the newly created class
+ *
+ * Notes
+ * -----
+ *  When working with the generic pointer p, we do a rather odd thing.
+ *
+ *  Each class inherits struct Class, so it contains a field struct Class 
+ *  on the first position.
+ *  We fill this field with the class variable and let the constructor
+ *  manage the rest of the fields
  *
  */
 
@@ -81,8 +94,7 @@ void delete (void * self) {
 /*
  * Arguments
  * ---------
- *  1. The object to be cloned, it is constant to ensure the user
- *      that no one will malform it
+ *  1. The object to be cloned
  *
  * Description
  * -----------
